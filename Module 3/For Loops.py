@@ -11,13 +11,16 @@ campuses = ["City", "Mesa", "Miramar"]
 #     print (index)
 
 # my attempt
-# i = 0
-# for campus in campuses:
-#     i += 1
-#     print (str(i)+") "+campus)
-
+i = 0
+for campus in campuses:
+    i += 1
+    print(str(i) + ") " + campus)
+# prof
 i = 0
 for campus in range(len(campuses)):
     i += 1
     print(str(i))
     print(campuses[campus])
+# mara
+for i in range(len(campuses)):
+    print(str(i + 1) + campuses[i])
