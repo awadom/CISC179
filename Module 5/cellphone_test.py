@@ -10,7 +10,7 @@ def main():
 
     print("Here is the data that you entered: ")
     print("Manufacturer: ", phone.get_manufact())
-    print("Model Number: ", phone.get_model())
+    print("Model Number: ", phone.model)
     print("Retail Price: $", format(phone.get_retail_price(), ".2f"), sep="")
 
 
