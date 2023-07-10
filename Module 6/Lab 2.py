@@ -9,7 +9,6 @@ def read_address_book(file_path):
     return address_book
 
 
-
 def write_address_book(file_path, address_book):
     with open(file_path, "w") as file:
         for name, email in sorted(address_book.items()):
@@ -27,17 +26,15 @@ def lookup_email(address_book):
 
 def add_contact(address_book):
     name = input("Enter name:")
-    email = input("Enter an email address: ")
+    email = input("Enter email address:")
     address_book[name] = email
-    print("Enter")
 
 
 def change_email(address_book):
-    name = input("Enter name to change the email address: ")
+    name = input("Enter name:")
     if name in address_book:
-        new_email = input("Enter a new email address: ")
+        new_email = input("Enter new email address:")
         address_book[name] = new_email
-        print("Email address updated successfully.")
     else:
         print("Sorry, no contact exists under that name.")
 
@@ -55,13 +52,13 @@ file_path = "./Module 6/phonebook.in"
 address_book = read_address_book(file_path)
 
 while True:
-
+    print("Enter")
     print("1) look up an email address")
     print("2) add a new name and email address")
     print("3) change an email address")
     print("4) delete a name and email address")
-    choice = input("5) save address book and exit:")
-
+    print("5) save address book and exit:", end="")
+    choice = input()
     if choice == "1":
         lookup_email(address_book)
     elif choice == "2":
@@ -71,7 +68,8 @@ while True:
     elif choice == "4":
         delete_contact(address_book)
     elif choice == "5":
-        write_address_book("phonebook.out", address_book)
+        write_address_book("./Module 6/phonebook.out", address_book)
+        print()
         break
     else:
         print("Invalid choice. Please enter a number from 1 to 5.")
